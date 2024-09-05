@@ -10,10 +10,10 @@ class Hand{
         let aceCount = 0; 
         for(const card of this.hand){
             const cardValue = card.getValue();
-            if(cardValue.equals("J") || cardValue.equals("Q") || cardValue.equals("K")){
+            if(cardValue === "J" || cardValue === "Q" || cardValue === "K"){
                 sum += 10;
             }
-            else if(cardValue.equals("A")){
+            else if(cardValue === "A"){
                 sum += 11;
                 aceCount += 1;
             }
@@ -30,10 +30,10 @@ class Hand{
 
     calculateCardValue(card){
         const cardValue = card.getValue();
-        if(cardValue.equals("J") || cardValue.equals("Q") || cardValue.equals("K")){
+        if(cardValue === "J" || cardValue ===  "Q" || cardValue === "K"){
             return 10;
         }
-        else if(cardValue.equals("A")){
+        else if(cardValue === "A"){
             return 11;
         }
         else{
